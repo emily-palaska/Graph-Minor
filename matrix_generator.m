@@ -1,6 +1,7 @@
 clc;
+den = 0.01;
 n = 4000;
-m = 0.01 * n ^ 2;
+m = den * n ^ 2;
 line = "%%MatrixMarket matrix coordinate real unsymmetric";
 output = line + newline + num2str(n) + ' ' + num2str(n) + ' ' + num2str(m) + newline;
 
@@ -25,7 +26,7 @@ for k = 1:m
 end
 
 
-writelines(output, '9n4000.txt');
+writelines(output, 'file.txt');
 
 
 
