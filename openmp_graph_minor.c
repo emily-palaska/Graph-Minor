@@ -13,10 +13,11 @@ int m, n;
 int c, p;
 int count;
 
-//initiliazes the configuration vector and find number of clusters
+//initializes the configuration vector and find number of clusters
 int init_vec() {
 	p = omp_get_max_threads();
 	printf("Working with %d threads.\n", p);
+	printf("Merging into %d clusters.\n", c);
 	c = n / 10;
     	vec = malloc(sizeof(int) * n);
     	if(!vec) {
